@@ -81,7 +81,44 @@ button { cursor: pointer; font-family: var(--mono); border: none; background: no
   transition: var(--transition);
   display: block;
 }
-.navbar-photo:hover { border-color: var(--ink); transform: scale(1.06); }
+.navbar-photo-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.navbar-photo-large {
+  position: absolute;
+  top: calc(100% + 15px);
+  left: 0;
+  width: 240px;
+  height: 240px;
+  border-radius: 12px;
+  border: 4px solid var(--surface);
+  box-shadow: 0 14px 40px rgba(0,0,0,0.15), 0 0 0 1px var(--border);
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px) scale(0.95);
+  transform-origin: top left;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+  background: var(--surface);
+}
+.navbar-photo-large img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+.navbar-photo-container:hover .navbar-photo-large {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+}
+.navbar-photo-container:hover .navbar-photo { 
+  border-color: var(--ink); 
+}
 .navbar-links {
   display: flex;
   gap: clamp(1.5rem, 3vw, 3rem);

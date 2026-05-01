@@ -31,10 +31,15 @@ export default function Navbar() {
   return (
     <>
       <nav className={`navbar${scrolled ? ' scrolled' : ''}`}>
-        {/* Photo replaces KG logo */}
-        <button onClick={() => scrollTo('hero')} style={{ background: 'none', border: 'none', padding: 0 }}>
-          <img src={myPhoto} alt="Kaishav Gupta" className="navbar-photo" />
-        </button>
+        {/* Photo replaces KG logo with hover zoom */}
+        <div className="navbar-photo-container">
+          <button onClick={() => scrollTo('hero')} style={{ background: 'none', border: 'none', padding: 0 }}>
+            <img src={myPhoto} alt="Kaishav Gupta" className="navbar-photo" />
+          </button>
+          <div className="navbar-photo-large">
+            <img src={myPhoto} alt="Kaishav Gupta Enlarged" />
+          </div>
+        </div>
 
         <div className="navbar-links">
           {links.filter(l => l !== 'hero').map(link => (
