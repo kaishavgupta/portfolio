@@ -16,7 +16,7 @@ const projects = [
       'Resolved CI/CD production bugs related to TypeScript type-checking for null values and explicit typing in list-mapping logic during Vercel deployment.',
     ],
     github: 'https://github.com/kaishavgupta',
-    live: '#',
+    live: 'https://kaishavsuperblog.vercel.app/',
   },
   {
     id: '02',
