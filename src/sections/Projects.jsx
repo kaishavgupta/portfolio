@@ -134,8 +134,7 @@ export default function Projects() {
       <div className="projects-inner">
         <div className="projects-header">
           <div>
-
-            <h2 className="section-title">Selected work.</h2>
+            <h2 className="section-title">My Projects</h2>
           </div>
           <a href="https://github.com/kaishavgupta" target="_blank" rel="noreferrer"
             style={{ fontFamily: 'var(--mono)', fontSize: '0.72rem', letterSpacing: '0.06em', textTransform: 'uppercase', color: 'var(--ink-muted)', borderBottom: '1px solid var(--border)', paddingBottom: '2px' }}>

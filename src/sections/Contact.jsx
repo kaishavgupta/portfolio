@@ -26,7 +26,7 @@ export default function Contact() {
         </div>
 
         <p className="footer-copyright">
-          © {new Date().getFullYear()} Kaishav Gupta — Built with React + Three.js
+          © {new Date().getFullYear()} Devloped by Kaishav Gupta
         </p>
       </div>
     </footer>
