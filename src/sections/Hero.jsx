@@ -11,6 +11,7 @@ const socials = [
 export default function Hero() {
   const contentRef = useRef()
   const [isModalOpen, setIsModalOpen] = useState(false)
+  const [isShining, setIsShining] = useState(false)
 
   useEffect(() => {
     const el = contentRef.current
@@ -25,6 +26,14 @@ export default function Hero() {
   }, [])
 
   const scrollTo = (id) => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+
+  const handleGetInTouch = () => {
+    // Scroll so that the social bar and the beginning of About are in view
+    document.getElementById('hero-socials')?.scrollIntoView({ behavior: 'smooth', block: 'center' })
+    setIsShining(false)
+    setTimeout(() => setIsShining(true), 50)
+    setTimeout(() => setIsShining(false), 1500)
+  }
 
   return (
     <div className="hero">
@@ -47,12 +56,12 @@ export default function Hero() {
 
         <div className="hero-buttons">
           <button className="btn-primary" onClick={() => scrollTo('projects')}>View Projects</button>
-          <button className="btn-outline" onClick={() => scrollTo('contact')}>Get in Touch</button>
+          <button className="btn-outline" onClick={handleGetInTouch}>Get in Touch</button>
         </div>
       </div>
 
       {/* Social links bar — pinned to bottom of hero */}
-      <div className="hero-social-bar">
+      <div id="hero-socials" className={`hero-social-bar ${isShining ? 'shining' : ''}`}>
         {socials.map(s => (
           <a key={s.label} href={s.href} className="hero-social-item" target="_blank" rel="noreferrer">
             <span className="hero-social-label">{s.label}</span>

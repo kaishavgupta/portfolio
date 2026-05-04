@@ -281,7 +281,34 @@ button { cursor: pointer; font-family: var(--mono); border: none; background: no
   background: rgba(247,246,243,0.9);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
+  position: relative; /* ensure the shine pseudo-element is contained */
+  overflow: hidden;
 }
+
+.hero-social-bar.shining::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    to right, 
+    rgba(255,255,255,0) 0%, 
+    rgba(255,255,255,0.8) 50%, 
+    rgba(255,255,255,0) 100%
+  );
+  transform: skewX(-25deg);
+  animation: shine-sweep 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  pointer-events: none;
+  z-index: 10;
+}
+
+@keyframes shine-sweep {
+  0% { left: -100%; }
+  100% { left: 200%; }
+}
+
 .hero-social-item {
   flex: 1;
   display: flex;
