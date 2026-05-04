@@ -330,9 +330,14 @@ button { cursor: pointer; font-family: var(--mono); border: none; background: no
 .hero-link:hover { color: var(--ink); border-color: var(--ink); }
 
 @media (max-width: 600px) {
+  .hero-content {
+    justify-content: flex-start;
+    padding-top: 130px;
+  }
   .hero-social-bar { flex-wrap: wrap; }
   .hero-social-item { flex: 0 0 50%; border-bottom: 1px solid var(--border); }
   .hero-social-item:nth-child(2) { border-right: none; }
+  .hero-social-item:nth-child(3) { flex: 0 0 100%; border-bottom: none; border-right: none; }
   .hero-social-value { font-size: 0.7rem; }
 }
 .scroll-indicator {

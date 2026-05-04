@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import myPhoto from '../assets/my-photo.png'
+import resumePdf from '../assets/resume.pdf'
 
 const links = ['hero', 'about', 'projects', 'education', 'skills', 'contact']
 const labels = { hero: 'Home', about: 'About', projects: 'Projects', education: 'Education', skills: 'Skills', contact: 'Contact' }
@@ -48,6 +49,9 @@ export default function Navbar() {
               {labels[link]}
             </button>
           ))}
+          <a href={resumePdf} download="Kaishav_Gupta_Resume.pdf" className="btn-primary" style={{ textDecoration: 'none', marginLeft: '1rem', textTransform: 'none' }}>
+            Download my resume
+          </a>
         </div>
 
         <button className="navbar-hamburger" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu">
@@ -63,6 +67,9 @@ export default function Navbar() {
             {labels[link]}
           </button>
         ))}
+        <a href={resumePdf} download="Kaishav_Gupta_Resume.pdf" className="btn-primary" style={{ textDecoration: 'none', marginTop: '1rem', textTransform: 'none' }}>
+          Download my resume
+        </a>
       </div>
     </>
   )
