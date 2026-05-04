@@ -49,6 +49,40 @@ const projects = [
     github: 'https://github.com/kaishavgupta',
     live: '#',
   },
+  {
+    id: '04',
+    title: 'Careverse',
+    subtitle: 'Doctor Appointment Booking System',
+    tags: ['MERN', 'Full Stack'],
+    tech: ['Node.js', 'Express', 'MongoDB', 'React', 'Vite', 'Cloudinary'],
+    date: 'May 2026',
+    bullets: [
+      'Built an end-to-end doctor appointment platform covering backend, patient frontend, and admin/doctor dashboard.',
+      'Designed a RESTful API using Node.js & Express with role-based routing for Admins, Doctors, and Patients.',
+      'Integrated MongoDB (Mongoose) to handle appointment workflows and used Cloudinary for secure storage of doctor profiles and medical documents.',
+      'Developed two React + Vite applications: Patient Portal and Admin/Doctor Dashboard.',
+      'Implemented CORS middleware and cookie-based authentication for secure session handling.'
+    ],
+    github: 'https://github.com/kaishavgupta',
+    live: '#',
+  },
+  {
+    id: '05',
+    title: 'Expense Tracker',
+    subtitle: 'Personal Finance Tracking Application',
+    tags: ['MERN', 'Full Stack'],
+    tech: ['React', 'Node.js', 'Express', 'MongoDB', 'Vite', 'JWT'],
+    date: 'May 2026',
+    bullets: [
+      'Developed a robust MERN stack application for tracking personal finances with a responsive UI built using Vite.',
+      'Implemented JWT-based authentication using secure, HTTP-only cookies to manage user sessions and protect routes.',
+      'Engineered RESTful API endpoints and designed a MongoDB schema embedding transaction data to streamline retrieval.',
+      'Integrated React Router for navigation and React Toastify for real-time feedback and notifications.',
+      'Built features for categorizing transactions and calculating real-time balance totals for an immediate financial overview.'
+    ],
+    github: 'https://github.com/kaishavgupta',
+    live: '#',
+  }
 ]
 
 function ProjectCard({ project }) {
