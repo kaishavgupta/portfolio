@@ -180,7 +180,7 @@ button { cursor: pointer; font-family: var(--mono); border: none; background: no
 /* ── HERO ── */
 .hero {
   position: relative;
-  min-height: 140vh; /* taller than viewport — gives room to scroll so sticky bar works */
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   background: var(--bg);
@@ -331,13 +331,13 @@ button { cursor: pointer; font-family: var(--mono); border: none; background: no
 
 @media (max-width: 600px) {
   .hero-content {
-    justify-content: flex-start;
-    padding-top: 130px;
+    padding-top: 100px;
   }
   .hero-social-bar { flex-wrap: wrap; }
   .hero-social-item { flex: 0 0 50%; border-bottom: 1px solid var(--border); }
-  .hero-social-item:nth-child(2) { border-right: none; }
-  .hero-social-item:nth-child(3) { flex: 0 0 100%; border-bottom: none; border-right: none; }
+  .hero-social-item:nth-child(2), .hero-social-item:nth-child(4) { border-right: none; }
+  .hero-social-item:nth-child(3) { flex: 0 0 50%; border-bottom: none; border-right: 1px solid var(--border); }
+  .hero-social-item:nth-child(4) { flex: 0 0 50%; border-bottom: none; border-right: none; }
   .hero-social-value { font-size: 0.7rem; }
 }
 .scroll-indicator {
@@ -935,4 +935,164 @@ button { cursor: pointer; font-family: var(--mono); border: none; background: no
   color: #444;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+}
+
+/* ── CONTACT FORM ── */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  width: 100%;
+  max-width: 1000px;
+  text-align: left;
+  margin-bottom: 4rem;
+}
+
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .contact-info .footer-links {
+    justify-content: center;
+  }
+  .contact-info {
+    align-items: center;
+  }
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-info .footer-links {
+  justify-content: flex-start;
+}
+
+.contact-form-container {
+  background: #1a1a1a;
+  padding: 2.5rem;
+  border-radius: var(--radius);
+  border: 1px solid #333;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  text-align: left;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  color: #aaa;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.85rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--ink-faint);
+}
+
+.contact-form .btn-primary {
+  background: var(--ink);
+  color: var(--bg);
+  width: 100%;
+}
+
+.contact-form .btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.error-text {
+  color: #ff5555;
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+}
+
+/* ── MODAL ── */
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(4px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.modal-content {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 500px;
+  position: relative;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  font-size: 2rem;
+  font-family: var(--sans);
+  color: var(--ink-muted);
+  cursor: pointer;
+  background: none;
+  border: none;
+  line-height: 1;
+}
+
+.modal-close:hover {
+  color: var(--ink);
+}
+
+.modal-title {
+  font-family: var(--serif);
+  font-size: 2rem;
+  color: var(--ink);
+  margin-bottom: 1.5rem;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.modal-subtitle {
+  margin-top: 1.5rem;
+  font-size: 0.85rem;
+  color: var(--ink-muted);
+  text-align: center;
+}
+
+.modal-subtitle a {
+  text-decoration: underline;
+  color: var(--ink);
 }

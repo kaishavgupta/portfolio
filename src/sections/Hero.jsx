@@ -1,5 +1,6 @@
-import { useEffect, useRef } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import Scene3D from '../components/Scene3D'
+import ContactModal from '../components/ContactModal'
 
 const socials = [
   { label: 'GitHub', value: 'kaishavgupta', href: 'https://github.com/kaishavgupta' },
@@ -9,6 +10,7 @@ const socials = [
 
 export default function Hero() {
   const contentRef = useRef()
+  const [isModalOpen, setIsModalOpen] = useState(false)
 
   useEffect(() => {
     const el = contentRef.current
@@ -57,7 +59,13 @@ export default function Hero() {
             <span className="hero-social-value">{s.value}</span>
           </a>
         ))}
+        <button className="hero-social-item" onClick={() => setIsModalOpen(true)}>
+          <span className="hero-social-label">Message</span>
+          <span className="hero-social-value">Contact Me</span>
+        </button>
       </div>
+
+      <ContactModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </div>
   )
 }

@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import ContactModal from './ContactModal'
 import myPhoto from '../assets/my-photo.png'
 import resumePdf from '../assets/resume.pdf'
 
@@ -9,6 +10,7 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [active, setActive] = useState('hero')
   const [menuOpen, setMenuOpen] = useState(false)
+  const [isModalOpen, setIsModalOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,6 +27,11 @@ export default function Navbar() {
   }, [])
 
   const scrollTo = (id) => {
+    if (id === 'contact') {
+      setIsModalOpen(true)
+      setMenuOpen(false)
+      return
+    }
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
     setMenuOpen(false)
   }
@@ -71,6 +78,8 @@ export default function Navbar() {
           Download my resume
         </a>
       </div>
+
+      <ContactModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </>
   )
 }
