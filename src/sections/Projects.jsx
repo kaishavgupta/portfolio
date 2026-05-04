@@ -55,7 +55,7 @@ const projects = [
     subtitle: 'Doctor Appointment Booking System',
     tags: ['MERN', 'Full Stack'],
     tech: ['Node.js', 'Express', 'MongoDB', 'React', 'Vite', 'Cloudinary'],
-    date: 'May 2026',
+    date: 'October 2025',
     bullets: [
       'Built an end-to-end doctor appointment platform covering backend, patient frontend, and admin/doctor dashboard.',
       'Designed a RESTful API using Node.js & Express with role-based routing for Admins, Doctors, and Patients.',
@@ -72,7 +72,7 @@ const projects = [
     subtitle: 'Personal Finance Tracking Application',
     tags: ['MERN', 'Full Stack'],
     tech: ['React', 'Node.js', 'Express', 'MongoDB', 'Vite', 'JWT'],
-    date: 'May 2026',
+    date: 'September 2025',
     bullets: [
       'Developed a robust MERN stack application for tracking personal finances with a responsive UI built using Vite.',
       'Implemented JWT-based authentication using secure, HTTP-only cookies to manage user sessions and protect routes.',
