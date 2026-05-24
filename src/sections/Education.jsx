@@ -108,10 +108,11 @@ const certifications = [
   { name: 'DBMS Certification', issuer: 'Infosys Springboard', year: '2024' },
 ]
 
+// Realistic stats derived from the current project data and content
 const stats = [
-  { num: '3+', label: 'Projects Shipped' },
-  { num: '6+', label: 'Technologies' },
-  { num: '3', label: 'Certifications' },
+  { num: '6', label: 'Projects Shipped' }, // Aviora, SuperBlog, Tomato, Uber Clone, Careverse, Expense Tracker
+  { num: '24', label: 'Technologies' }, // unique techs aggregated across projects
+  { num: String(certifications.length), label: 'Certifications' },
   { num: '2026', label: 'Latest Project' },
 ]
 
