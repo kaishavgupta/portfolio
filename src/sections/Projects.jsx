@@ -3,6 +3,23 @@ import { useState } from 'react'
 const projects = [
   {
     id: '01',
+    title: 'Aviora',
+    subtitle: 'Airport Passenger Assistance Platform · React Native & Firebase',
+    tags: ['Mobile', 'React Native'],
+    tech: ['React Native', 'Expo', 'Firebase', 'Firestore', 'Supabase', 'Zustand', 'React Navigation'],
+    date: 'May – June 2026',
+    bullets: [
+      'Built a full-stack, role-based mobile app (React Native + Expo) connecting airport passengers with support staff for real-time assistance request management.',
+      'Implemented a multi-step wizard form with offline draft autosave via AsyncStorage, document uploads to Firebase Storage, and QR code generation for request verification.',
+      'Engineered a strict sequential status workflow (New → Under Review → Staff Assigned → Passenger Contacted → In Progress → Completed) enforced at the database level using Firestore rules.',
+      'Developed a real-time staff console with global keyword search, filter chips, staff allocation dialogs, and an inverted live chat thread powered by Firestore onSnapshot listeners.',
+      'Integrated expo-notifications for push alerts on status transitions, a global dark/light mode toggle persisted to AsyncStorage, and a custom daily operations bar chart report.',
+    ],
+    github: 'https://github.com/kaishavgupta',
+    live: '#',
+  },
+  {
+    id: '02',
     title: 'SuperBlog',
     subtitle: 'AI-Powered Content Platform · Full-Stack Next.js & Supabase',
     tags: ['AI', 'Full Stack'],
@@ -19,7 +36,7 @@ const projects = [
     live: 'https://kaishavsuperblog.vercel.app/',
   },
   {
-    id: '02',
+    id: '03',
     title: 'Tomato',
     subtitle: 'Real-Time Food Delivery System · Scalable MERN Microservices',
     tags: ['MERN', 'Microservices'],
@@ -35,7 +52,7 @@ const projects = [
     live: '#',
   },
   {
-    id: '03',
+    id: '04',
     title: 'Uber Clone',
     subtitle: 'Taxi Booking & Management System · Scalable Real-Time Full Stack',
     tags: ['Real-Time', 'Full Stack'],
@@ -50,7 +67,7 @@ const projects = [
     live: '#',
   },
   {
-    id: '04',
+    id: '05',
     title: 'Careverse',
     subtitle: 'Doctor Appointment Booking System',
     tags: ['MERN', 'Full Stack'],
@@ -67,7 +84,7 @@ const projects = [
     live: '#',
   },
   {
-    id: '05',
+    id: '06',
     title: 'Expense Tracker',
     subtitle: 'Personal Finance Tracking Application',
     tags: ['MERN', 'Full Stack'],

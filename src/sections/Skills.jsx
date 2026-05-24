@@ -15,13 +15,13 @@ const skillData = [
     category: 'Frontend',
     icon: '◈',
     color: '#1a1a1a',
-    pills: ['React.js', 'Next.js 15', 'Redux', 'Tailwind CSS', 'Three.js', 'HTML5', 'CSS3'],
+    pills: ['React.js', 'Next.js 15', 'Redux', 'Tailwind CSS', 'Three.js', 'HTML5', 'CSS3', 'React Native', 'Expo'],
   },
   {
     category: 'Backend',
     icon: '⌬',
     color: '#1a1a1a',
-    pills: ['Node.js', 'Express.js', 'RESTful APIs', 'JWT Auth', 'RabbitMQ', 'Supabase'],
+    pills: ['Node.js', 'Express.js', 'RESTful APIs', 'JWT Auth', 'RabbitMQ', 'Supabase', 'Firebase', 'Firestore', 'AsyncStorage'],
   },
   {
     category: 'Databases',
@@ -40,6 +40,12 @@ const skillData = [
     icon: '✦',
     color: '#1a1a1a',
     pills: ['Gemini Pro/Flash API', 'Prompt Engineering', 'Antigravity AI', 'Claude Sonnet'],
+  },
+  {
+    category: 'Mobile Development',
+    icon: '▦',
+    color: '#1a1a1a',
+    pills: ['React Native', 'Expo', 'Zustand', 'React Navigation', 'expo-notifications', 'Firebase Auth', 'EAS Build'],
   },
 ]
 
