@@ -21,7 +21,7 @@ const projects = [
     ],
     features: ['Role-based authentication', 'Real-time status updates', 'Offline draft autosave', 'QR code verification', 'Live chat support', 'Push notifications', 'Dark/Light mode'],
     github: 'https://github.com/kaishavgupta/aviora',
-    live: '#',
+    live: 'https://expo.dev/artifacts/eas/atXnwkv9rxjMztRTmAXEaD.apk',
   },
   {
     id: '02',
